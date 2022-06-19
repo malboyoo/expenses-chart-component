@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+:root {
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --pale-orange: hsl(33, 100%, 98%);
+}
+
+/* Landscape phones and down */
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.8rem;
+  min-height: 100vh;
+  background: var(--cream);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+header {
+  color: var(--pale-orange);
+  width: 550px;
+  height: 130px;
+  background: var(--soft-red);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 0 3.5rem;
+  margin-bottom: 2.1rem;
+}
+header .balance span {
+  display: block;
+  margin-top: 1rem;
+  font-size: 3.3rem;
+  font-weight: 700;
+}
+header .logo {
+  width: 72px;
+  height: 48px;
+  background: url("../images/logo.svg");
+}
+
+section {
+  width: 550px;
+  background: white;
+  border-radius: 2rem;
+  padding: 0 3.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+section h1 {
+  margin: 3.5rem 0;
+  font-size: 3.3rem;
+  color: var(--dark-brown);
+  font-weight: 700;
+}
+section .week-chart {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 20rem;
+  width: 100%;
+}
+section .week-chart .candle-container {
+  flex: 1 1;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  font-size: 1.6rem;
+}
+section .week-chart .candle-container .candle {
+  background-color: var(--soft-red);
+  border-radius: 0.5rem;
+  flex: 1 1 auto;
+  margin: 0 0.9rem;
+}
+section .week-chart .candle-container p {
+  margin-top: 0.5rem;
+  color: var(--medium-brown);
+}
+section .week-chart .mon {
+  height: 37%;
+}
+section .week-chart .tue {
+  height: 63%;
+}
+section .week-chart .wed {
+  height: 87%;
+}
+section .week-chart .wed .candle {
+  background: var(--cyan);
+}
+section .week-chart .thu {
+  height: 57%;
+}
+section .week-chart .fri {
+  height: 45%;
+}
+section .week-chart .sat {
+  height: 74%;
+}
+section .week-chart .sun {
+  height: 51%;
+}
+section .separator {
+  width: 100%;
+  height: 0.2rem;
+  background: var(--cream);
+  margin: 3rem 0;
+}
+section .total-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+section .total-container h2 {
+  color: var(--medium-brown);
+}
+section .total-container span {
+  color: var(--dark-brown);
+}
+section .total-container .total-container-left .month-total {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+section .total-container .total-container-right {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: end;
+}
+section .total-container .total-container-right .pourcentage-last-month {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: end;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,18 @@
+{
+   "name": "expenses-chart-component",
+   "version": "1.0.0",
+   "description": "![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)",
+   "main": "index.js",
+   "module": "ESNext",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "sass": "sass -w scss:css"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "sass": "^1.52.3",
+      "typescript": "^4.7.4"
+   }
+}

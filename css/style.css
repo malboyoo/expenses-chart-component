@@ -40,7 +40,7 @@ h2 {
 header {
   color: var(--pale-orange);
   width: 550px;
-  height: 130px;
+  height: 125px;
   background: var(--soft-red);
   display: flex;
   flex-flow: row nowrap;
@@ -49,6 +49,12 @@ header {
   border-radius: 2rem;
   padding: 0 3.5rem;
   margin-bottom: 2.1rem;
+}
+@media (max-width: 600px) {
+  header {
+    width: 94%;
+    padding: 0 2rem;
+  }
 }
 header .balance span {
   display: block;
@@ -70,18 +76,31 @@ section {
   display: flex;
   flex-flow: column nowrap;
 }
+@media (max-width: 600px) {
+  section {
+    width: 94%;
+    padding: 0 2rem;
+  }
+}
 section h1 {
   margin: 3.5rem 0;
   font-size: 3.3rem;
   color: var(--dark-brown);
   font-weight: 700;
 }
+@media (max-width: 600px) {
+  section h1 {
+    font-size: 2.7rem;
+    margin: 2.5rem 0;
+  }
+}
 section .week-chart {
+  margin-top: 3rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-end;
-  height: 20rem;
+  height: 17rem;
   width: 100%;
 }
 section .week-chart .candle-container {
@@ -90,40 +109,49 @@ section .week-chart .candle-container {
   flex-flow: column nowrap;
   text-align: center;
   font-size: 1.6rem;
+  position: relative;
+  transition: 1s all;
 }
 section .week-chart .candle-container .candle {
   background-color: var(--soft-red);
   border-radius: 0.5rem;
   flex: 1 1 auto;
   margin: 0 0.9rem;
+  transition: 0.5s all;
+}
+@media (max-width: 600px) {
+  section .week-chart .candle-container .candle {
+    margin: 0 0.5rem;
+  }
+}
+section .week-chart .candle-container .candle:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 section .week-chart .candle-container p {
   margin-top: 0.5rem;
   color: var(--medium-brown);
 }
-section .week-chart .mon {
-  height: 37%;
+section .week-chart .candle-container .pop-up {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -4.8rem;
+  left: center;
+  width: 100%;
+  height: 4rem;
+  background: var(--dark-brown);
+  color: var(--pale-orange);
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0;
 }
-section .week-chart .tue {
-  height: 63%;
-}
-section .week-chart .wed {
-  height: 87%;
-}
-section .week-chart .wed .candle {
-  background: var(--cyan);
-}
-section .week-chart .thu {
-  height: 57%;
-}
-section .week-chart .fri {
-  height: 45%;
-}
-section .week-chart .sat {
-  height: 74%;
-}
-section .week-chart .sun {
-  height: 51%;
+@media (max-width: 600px) {
+  section .week-chart .candle-container .pop-up {
+    width: 100%;
+  }
 }
 section .separator {
   width: 100%;
@@ -137,6 +165,11 @@ section .total-container {
   justify-content: space-between;
   margin-bottom: 5rem;
 }
+@media (max-width: 600px) {
+  section .total-container {
+    margin-bottom: 3rem;
+  }
+}
 section .total-container h2 {
   color: var(--medium-brown);
 }
@@ -146,6 +179,11 @@ section .total-container span {
 section .total-container .total-container-left .month-total {
   font-size: 4.5rem;
   font-weight: 700;
+}
+@media (max-width: 600px) {
+  section .total-container .total-container-left .month-total {
+    font-size: 3.5rem;
+  }
 }
 section .total-container .total-container-right {
   display: flex;

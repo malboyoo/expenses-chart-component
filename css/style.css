@@ -39,8 +39,8 @@ h2 {
 
 header {
   color: var(--pale-orange);
-  width: 550px;
-  height: 125px;
+  width: 55rem;
+  height: 12.5rem;
   background: var(--soft-red);
   display: flex;
   flex-flow: row nowrap;
@@ -52,6 +52,7 @@ header {
 }
 @media (max-width: 600px) {
   header {
+    max-width: 55rem;
     width: 94%;
     padding: 0 2rem;
   }
@@ -63,13 +64,13 @@ header .balance span {
   font-weight: 700;
 }
 header .logo {
-  width: 72px;
-  height: 48px;
+  width: 7.2rem;
+  height: 4.8rem;
   background: url("../images/logo.svg");
 }
 
 section {
-  width: 550px;
+  width: 55rem;
   background: white;
   border-radius: 2rem;
   padding: 0 3.5rem;
@@ -79,6 +80,7 @@ section {
 @media (max-width: 600px) {
   section {
     width: 94%;
+    max-width: 55rem;
     padding: 0 2rem;
   }
 }
@@ -110,7 +112,7 @@ section .week-chart .candle-container {
   text-align: center;
   font-size: 1.6rem;
   position: relative;
-  transition: 1s all;
+  transition: 0.5s all;
 }
 section .week-chart .candle-container .candle {
   background-color: var(--soft-red);
@@ -143,14 +145,26 @@ section .week-chart .candle-container .pop-up {
   height: 4rem;
   background: var(--dark-brown);
   color: var(--pale-orange);
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: 700;
   border-radius: 0.5rem;
   padding: 0.6rem 0;
+  animation: fadeIn 0.5s;
 }
 @media (max-width: 600px) {
   section .week-chart .candle-container .pop-up {
     width: 100%;
+    font-size: 1.3rem;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
   }
 }
 section .separator {
@@ -194,15 +208,6 @@ section .total-container .total-container-right .pourcentage-last-month {
   font-weight: 700;
   font-size: 2rem;
   text-align: end;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228deg, 45%, 44%);
 }
 
 /*# sourceMappingURL=style.css.map */

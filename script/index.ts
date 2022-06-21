@@ -9,8 +9,11 @@ const applyDataFile = async () => {
    const data: SpendingData[] = await response.json();
 
    data.sort((a, b) => b.amount - a.amount);
-   //adding to cyan color tu the higher spending day
-   const higherDay: HTMLDivElement = document.querySelector(`.${data[0].day} .candle`)!;
+
+   //adding to cyan color to the current day
+   const date: Date = new Date();
+   const dateDay: String = date.toDateString().split(" ")[0].toLowerCase();
+   const higherDay: HTMLDivElement = document.querySelector(`.${dateDay} .candle`)!;
    higherDay.style.background = "var(--cyan)";
    for (let day of data) {
       const dayNode: HTMLDivElement = document.querySelector(`.${day.day}`)!;
